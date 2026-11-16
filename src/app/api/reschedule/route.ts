@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { requestInterviewReschedule } from "@/data/mockCandidates";
+import { requestInterviewReschedule } from "@/lib/mock-candidates";
 
 export async function POST(request: NextRequest) {
   try {

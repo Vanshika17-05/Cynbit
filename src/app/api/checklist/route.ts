@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { updateCandidateChecklist } from "@/data/mockCandidates";
+import { updateCandidateChecklist } from "@/lib/mock-candidates";
 
 export async function POST(request: NextRequest) {
   try {
