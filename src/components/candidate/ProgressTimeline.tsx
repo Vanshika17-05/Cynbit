@@ -368,11 +368,16 @@ export function ProgressTimeline({
                               key={i}
                               className="flex items-center gap-2.5 bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-1.5 text-xs shadow-2xs"
                             >
-                              <img
-                                src={person.avatar}
-                                alt={person.name}
-                                className="h-7 w-7 rounded-full object-cover border border-slate-200"
-                              />
+                              <div
+                                className="h-7 w-7 rounded-full bg-cynbit-100 dark:bg-cynbit-950 text-cynbit-700 dark:text-cynbit-300 border border-cynbit-300 dark:border-cynbit-700 flex items-center justify-center font-bold text-[10px] shrink-0"
+                                aria-label={person.name}
+                              >
+                                {person.name
+                                  .split(" ")
+                                  .map((n) => n[0])
+                                  .join("")
+                                  .slice(0, 2)}
+                              </div>
                               <div>
                                 <p className="font-semibold text-slate-900 dark:text-slate-100">
                                   {person.name}

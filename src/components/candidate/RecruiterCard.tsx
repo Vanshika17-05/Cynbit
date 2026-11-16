@@ -62,11 +62,16 @@ export function RecruiterCard({
         {/* Recruiter Identity */}
         <div className="flex items-center gap-3.5">
           <div className="relative">
-            <img
-              src={recruiter.avatar}
-              alt={recruiter.name}
-              className="h-14 w-14 rounded-full object-cover border-2 border-cynbit-200 dark:border-cynbit-800 shadow-sm"
-            />
+            <div
+              className="h-14 w-14 rounded-full bg-gradient-to-tr from-cynbit-600 via-cynbit-500 to-cyan-400 text-white flex items-center justify-center font-bold text-lg shadow-sm border-2 border-white dark:border-slate-800"
+              aria-label={recruiter.name}
+            >
+              {recruiter.name
+                .split(" ")
+                .map((n) => n[0])
+                .join("")
+                .slice(0, 2)}
+            </div>
             <div
               className="absolute bottom-0 right-0 h-4 w-4 rounded-full bg-emerald-500 border-2 border-white dark:border-slate-900"
               title="Online during office hours"
