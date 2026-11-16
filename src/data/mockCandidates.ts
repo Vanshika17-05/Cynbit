@@ -620,3 +620,4 @@ export function requestInterviewReschedule(
   candidateStore[id] = candidate;
   return candidate;
 }
+

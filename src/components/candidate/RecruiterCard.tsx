@@ -140,3 +140,4 @@ export function RecruiterCard({
     </Card>
   );
 }
+

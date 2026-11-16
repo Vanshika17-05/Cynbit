@@ -141,3 +141,4 @@ export function CandidateNotFound({ attemptedId }: CandidateNotFoundProps) {
     </div>
   );
 }
+

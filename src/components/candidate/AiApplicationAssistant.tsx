@@ -250,3 +250,4 @@ export function AiApplicationAssistant({ candidate }: AiApplicationAssistantProp
     </Card>
   );
 }
+

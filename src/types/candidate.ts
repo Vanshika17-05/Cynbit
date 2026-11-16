@@ -164,3 +164,4 @@ export interface ChatMessage {
   timestamp: string;
   suggestedQuestions?: string[];
 }
+
