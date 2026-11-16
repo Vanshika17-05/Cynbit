@@ -36,13 +36,13 @@ export function OfferCelebrationCard({
         zIndex: 9999,
       };
 
-      function fire(particleRatio: number, opts: confetti.Options) {
+      const fire = (particleRatio: number, opts: confetti.Options) => {
         confetti({
           ...defaults,
           ...opts,
           particleCount: Math.floor(count * particleRatio),
         });
-      }
+      };
 
       fire(0.25, {
         spread: 26,
