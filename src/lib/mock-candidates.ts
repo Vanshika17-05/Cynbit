@@ -71,7 +71,7 @@ export const MOCK_CANDIDATES: Record<string, CandidateProfile> = {
           ],
           interviewers: [
             {
-              name: "Rahul Sen",
+              name: "Dev Malhotra",
               role: "Principal AI Architect",
               avatar: "",
               linkedin: "https://linkedin.com/in/cynbit-engineering",
@@ -104,10 +104,10 @@ export const MOCK_CANDIDATES: Record<string, CandidateProfile> = {
     ],
     nextStep: {
       title: "Round 2: Agent Architecture & Systems Deep Dive",
-      description: "Join Rahul Sen and Neha Mathur on Google Meet. Please keep your camera on and prepare a 5-minute walkthrough of any agent or automation pipeline you've built.",
+      description: "Join Dev Malhotra and Neha Mathur on Google Meet. Please prepare a 5-minute walkthrough of a mock agent or automation pipeline.",
       expectedTimeframe: "Thursday, Nov 19, 2026 at 3:30 PM IST",
       expectedDate: "2026-11-19T15:30:00+05:30",
-      responsibleParty: "Rahul Sen (Principal AI Architect)",
+      responsibleParty: "Dev Malhotra (Principal AI Architect)",
       tips: [
         "Review Cynbit's open-source architecture principles in our prep sheet below",
         "Be ready to sketch a high-level sequence diagram using Excalidraw or pen-paper",
@@ -115,9 +115,9 @@ export const MOCK_CANDIDATES: Record<string, CandidateProfile> = {
       ],
     },
     recruiter: {
-      name: "Pooja Rathore",
+      name: "Maya Kapoor",
       title: "Lead Talent Partner • Tech & AI",
-      email: "pooja.rathore@cynbit.in",
+      email: "recruiter@example.com",
       phone: "+91 141 409 2381",
       avatar: "",
       sla: "Replies within 3 hours during Jaipur office hours (10 AM – 7 PM IST)",
@@ -174,7 +174,7 @@ export const MOCK_CANDIDATES: Record<string, CandidateProfile> = {
       updatedAt: "2026-11-09T16:20:00Z",
     },
     tags: ["High Priority", "Fast Track", "Agentic Systems", "Jaipur Hybrid"],
-    aiSummary: "Aarav Sharma has cleared stage 1 (Application) and stage 2 (Technical Screening) with a 94/100 score. He is currently in stage 3 (Interview), with his 60-minute Technical Architecture session confirmed for Thursday, Nov 19 at 3:30 PM IST with Rahul Sen and Neha Mathur. He has one pending document upload (Architecture diagram), is recommended to read the prep sheet, and can reschedule if required. Recruiter is Pooja Rathore (pooja.rathore@cynbit.in). Next milestone is the formal Offer stage.",
+    aiSummary: "Aarav Sharma is a fictional candidate in the Interview stage, with a mock Technical Architecture session and one simulated pending document upload. The next mock milestone is the Offer stage.",
     frequentlyAsked: [
       {
         q: "What will be asked in Thursday's technical round?",
@@ -186,7 +186,7 @@ export const MOCK_CANDIDATES: Record<string, CandidateProfile> = {
       },
       {
         q: "Can I reschedule if an emergency arises?",
-        a: "Yes! Use the 'Request Reschedule' button on your checklist. Pooja will offer alternative slots for Friday or early next week.",
+        a: "Yes. Use the Request Reschedule button to simulate choosing another slot in this demo.",
       },
     ],
   },
@@ -231,7 +231,7 @@ export const MOCK_CANDIDATES: Record<string, CandidateProfile> = {
           highlight: "Currently being reviewed by Tech Leads",
           bullets: [
             "Reviewing Next.js 14 App Router patterns, TypeScript rigor, and Tailwind modularity",
-            "Checking responsiveness, lighthouse performance, and API route structures",
+            "Checking responsiveness, page structure, and API route behavior",
           ],
         },
       },
@@ -265,9 +265,9 @@ export const MOCK_CANDIDATES: Record<string, CandidateProfile> = {
       ],
     },
     recruiter: {
-      name: "Pooja Rathore",
+      name: "Maya Kapoor",
       title: "Lead Talent Partner • Tech & AI",
-      email: "pooja.rathore@cynbit.in",
+      email: "recruiter@example.com",
       avatar: "",
       sla: "Replies within 3 hours during office hours",
       location: "Cynbit Jaipur Campus",
@@ -373,16 +373,16 @@ export const MOCK_CANDIDATES: Record<string, CandidateProfile> = {
       title: "Review & Sign Offer Letter",
       description: "We are thrilled to welcome you to Cynbit Technologies! Please review your official offer package below and sign the digital acceptance letter before Friday, Nov 27.",
       expectedTimeframe: "Valid till Friday, Nov 27, 2026",
-      responsibleParty: "Pooja Rathore & Founders Office",
+      responsibleParty: "Maya Kapoor & Founders Office",
       tips: [
         "Read the offer letter terms and benefits breakdown",
-        "Reach out to Pooja if you have questions regarding university exam leave allowances",
+        "Use the mock recruiter contact if you have questions about university exam leave",
       ],
     },
     recruiter: {
-      name: "Pooja Rathore",
+      name: "Maya Kapoor",
       title: "Lead Talent Partner • Tech & AI",
-      email: "pooja.rathore@cynbit.in",
+      email: "recruiter@example.com",
       avatar: "",
       sla: "Replies within 1-2 hours for offer holders",
       location: "Cynbit Jaipur Innovation Center",
@@ -441,7 +441,7 @@ export const MOCK_CANDIDATES: Record<string, CandidateProfile> = {
       },
       {
         q: "Can my joining date be adjusted for college exams?",
-        a: "Yes! We accommodate university examination schedules seamlessly. Just let Pooja know your academic dates.",
+        a: "This demo indicates that exam schedules can be discussed with the mock recruiter.",
       },
     ],
   },
@@ -512,9 +512,9 @@ export const MOCK_CANDIDATES: Record<string, CandidateProfile> = {
       ],
     },
     recruiter: {
-      name: "Pooja Rathore",
+      name: "Maya Kapoor",
       title: "Lead Talent Partner • Tech & AI",
-      email: "pooja.rathore@cynbit.in",
+      email: "recruiter@example.com",
       avatar: "",
       sla: "Replies within 3 hours during office hours",
       location: "Cynbit Jaipur Innovation Center",
@@ -547,7 +547,6 @@ export function getMockCandidate(id: string): CandidateProfile | null {
   const normalizedId = id.trim().toLowerCase();
   return candidateStore[normalizedId] || null;
 }
-
 export function getAllMockCandidates(): CandidateProfile[] {
   return Object.values(candidateStore);
 }
@@ -568,7 +567,6 @@ export function updateCandidateNotifications(
   candidateStore[id] = candidate;
   return candidate;
 }
-
 export function updateCandidateChecklist(
   id: string,
   actionId: string,
@@ -594,7 +592,6 @@ export function updateCandidateChecklist(
   candidateStore[id] = candidate;
   return candidate;
 }
-
 export function requestInterviewReschedule(
   id: string,
   request: {
@@ -612,8 +609,8 @@ export function requestInterviewReschedule(
   candidate.nextStep = {
     ...candidate.nextStep,
     title: "Reschedule Request Under Review",
-    description: `You requested to reschedule your session to ${request.preferredDate} (${request.preferredTimeSlot}). Reason: ${request.reason}. Pooja is syncing with the interview panel and will send updated calendar invites shortly.`,
-    expectedTimeframe: "Within 4 hours",
+    description: `You requested to reschedule your session to ${request.preferredDate} (${request.preferredTimeSlot}). Reason: ${request.reason}. This simulated change is not persisted on serverless hosting.`,
+    expectedTimeframe: "Demo request recorded",
   };
 
   candidateStore[id] = candidate;

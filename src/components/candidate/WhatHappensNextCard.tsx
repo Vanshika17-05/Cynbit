@@ -6,10 +6,9 @@ import {
   Sparkles,
   CalendarCheck2,
   CheckCircle,
-  HelpCircle,
   Download,
-  AlertCircle,
   UserCheck,
+  Mail,
 } from "lucide-react";
 import { CandidateNextStep, OverallStatus } from "@/types/candidate";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
@@ -22,6 +21,7 @@ interface WhatHappensNextCardProps {
   overallStatus: OverallStatus;
   candidateName: string;
   candidateId: string;
+  contactEmail?: string;
 }
 
 export function WhatHappensNextCard({
@@ -29,6 +29,7 @@ export function WhatHappensNextCard({
   overallStatus,
   candidateName,
   candidateId,
+  contactEmail = "recruiter@example.com",
 }: WhatHappensNextCardProps) {
   // Generate downloadable .ics calendar invite for the candidate
   const handleAddToCalendar = () => {
@@ -101,7 +102,7 @@ export function WhatHappensNextCard({
             {nextStep.description}
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 pt-3 border-t border-cynbit-200/50 dark:border-cynbit-900/50 text-xs">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4 pt-3 border-t border-cynbit-200/50 dark:border-cynbit-900/50 text-xs">
             <div className="flex items-center gap-2">
               <CalendarCheck2 className="h-4 w-4 text-cynbit-600 dark:text-cynbit-400 shrink-0" />
               <div>
@@ -123,6 +124,21 @@ export function WhatHappensNextCard({
                 <span className="font-semibold text-slate-800 dark:text-slate-200">
                   {nextStep.responsibleParty}
                 </span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Mail className="h-4 w-4 text-cynbit-600 dark:text-cynbit-400 shrink-0" />
+              <div>
+                <span className="text-slate-500 dark:text-slate-400 block text-[11px]">
+                  Direct Contact
+                </span>
+                <a
+                  href={`mailto:${contactEmail}`}
+                  className="font-semibold text-cynbit-600 dark:text-cynbit-400 hover:underline"
+                >
+                  {contactEmail}
+                </a>
               </div>
             </div>
           </div>
@@ -165,4 +181,3 @@ export function WhatHappensNextCard({
     </Card>
   );
 }
-

@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: `Reschedule request submitted to Pooja Rathore. Updated calendar invite will be issued within ~4 hours.`,
+      message: "Reschedule request recorded for this demo. No calendar invite will be sent.",
       candidate: updated,
     });
   } catch (error: any) {

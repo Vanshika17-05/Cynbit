@@ -28,7 +28,7 @@ const PERSONAS = [
     tag: "Primary Showcase",
     badgeVariant: "cyan" as const,
     highlights: [
-      "Technical Architecture session with Rahul Sen (Lead AI Architect)",
+      "Technical Architecture session with Dev Malhotra (Lead AI Architect)",
       "Actionable document upload: Architecture portfolio diagram",
       "Interactive technical prep sheet & reschedule modal",
     ],
@@ -125,7 +125,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-sm sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Eliminating candidate anxiety through layout-mirroring skeletons, interactive timelines, actionable next steps, and 24/7 grounded AI assistance.
+            Making application status easier to understand with layout-mirroring skeletons, interactive timelines, actionable next steps, and a grounded assistant.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
@@ -220,7 +220,7 @@ export default function HomePage() {
               Before vs. After: The Cynbit 2.0 Transformation
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400">
-              How Application Status Hub 2.0 addresses candidate anxiety at each touchpoint
+              How Application Status Hub 2.0 clarifies each candidate touchpoint
             </p>
           </div>
 

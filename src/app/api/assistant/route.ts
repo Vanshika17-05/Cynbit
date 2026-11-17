@@ -23,9 +23,10 @@ export async function POST(request: NextRequest) {
 
     const userPrompt = message.trim();
     const geminiApiKey = process.env.GEMINI_API_KEY;
+    const geminiModel = process.env.GEMINI_MODEL;
 
     // Check if real Gemini API key is configured
-    if (geminiApiKey) {
+    if (geminiApiKey && geminiModel) {
       try {
         const systemInstruction = `You are the Cynbit Technologies Application Assistant for candidate "${candidate.fullName}" (ID: ${candidate.id}).
 Cynbit Technologies is an AI automation & software engineering company based in Jaipur, Rajasthan, India.
@@ -60,7 +61,7 @@ ${
 `;
 
         const response = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${geminiApiKey}`,
+          `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(geminiModel)}:generateContent?key=${encodeURIComponent(geminiApiKey)}`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -91,7 +92,7 @@ ${
             return NextResponse.json({
               success: true,
               reply: generatedText,
-              provider: "Gemini 1.5 Flash (Live API)",
+              provider: "Gemini (Live API)",
               grounded: true,
             });
           }
@@ -146,7 +147,6 @@ ${
     } else if (
       lower.includes("recruiter") ||
       lower.includes("who") ||
-      lower.includes("pooja") ||
       lower.includes("contact") ||
       lower.includes("email")
     ) {

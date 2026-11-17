@@ -130,11 +130,11 @@ export function CandidateNotFound({ attemptedId }: CandidateNotFoundProps) {
             Think this is an error? Reach out to HR:
           </span>
           <a
-            href="mailto:careers@cynbit.in?subject=Missing%20Candidate%20Record"
+            href="mailto:recruiter@example.com?subject=Missing%20Candidate%20Record"
             className="inline-flex items-center gap-1.5 font-semibold text-cynbit-600 dark:text-cynbit-400 hover:underline"
           >
             <Mail className="h-3.5 w-3.5" />
-            <span>careers@cynbit.in</span>
+            <span>recruiter@example.com</span>
           </a>
         </CardFooter>
       </Card>

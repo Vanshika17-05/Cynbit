@@ -93,7 +93,7 @@ export function AiApplicationAssistant({ candidate }: AiApplicationAssistantProp
           {
             id: `asst-err-${Date.now()}`,
             sender: "assistant",
-            text: "I couldn't retrieve that info right now. Please feel free to email your recruiter Pooja Rathore directly!",
+            text: "I couldn't retrieve that information right now. Please email recruiter@example.com.",
             timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
           },
         ]);
